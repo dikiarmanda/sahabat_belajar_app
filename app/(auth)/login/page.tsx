@@ -1,5 +1,4 @@
 import { LoginForm } from '@/components/features/auth/LoginForm'
-import Link from 'next/link'
 import { APP_NAME } from '@/lib/constants'
 
 export default function LoginPage() {
@@ -11,13 +10,6 @@ export default function LoginPage() {
       </div>
 
       <LoginForm />
-
-      <div className="mt-6 text-center text-sm">
-        <span className="text-muted-foreground">Belum punya akun? </span>
-        <Link href="/register" className="text-primary hover:underline">
-          Daftar sekarang
-        </Link>
-      </div>
     </div>
   )
 }

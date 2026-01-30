@@ -6,11 +6,11 @@ export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   // Public routes that don't require authentication
-  const publicRoutes = ['/', '/login', '/register']
+  const publicRoutes = ['/', '/login']
   const isPublicRoute = publicRoutes.some((route) => pathname === route)
 
-  // Auth routes (login, register)
-  const isAuthRoute = pathname.startsWith('/login') || pathname.startsWith('/register')
+  // Auth routes (login only - pendaftaran user baru tidak tersedia)
+  const isAuthRoute = pathname.startsWith('/login')
 
   // Dashboard routes (protected)
   const isDashboardRoute = pathname.startsWith('/dashboard') || pathname.startsWith('/admin')
